@@ -12,7 +12,8 @@ function App() {
       audioEl = document.querySelector(audioID);
     }
     if (audioEl) {
-      audioEl.play()
+      audioEl.currentTime = 0;
+      audioEl.play();
       let displayText = audioEl.closest(".drum-pad").id.replaceAll("_", " ");
       // console.log(displayText);
       document.querySelector("#display").innerHTML = displayText;
